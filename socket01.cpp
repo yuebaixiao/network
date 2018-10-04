@@ -74,7 +74,9 @@ int main(int argc, char* argv[]){
 
     TcpThread* th = new TcpThread();
     th->client = client;
+    //开启多线程
     std::thread sth(&TcpThread::main, th);
+    //让子线程脱离父线程的监管
     sth.detach();
   }
   close(sock);
