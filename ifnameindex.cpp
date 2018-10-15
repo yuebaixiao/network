@@ -6,7 +6,7 @@ int main(){
   int index;
   char buf[128];
 
-  index = if_nametoindex("enp0s31");
+  index = if_nametoindex("enp0s3");
   if(index == 0){
     perror("if_nametoindex");
     return 1;
