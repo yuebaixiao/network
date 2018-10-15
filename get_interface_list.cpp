@@ -16,7 +16,7 @@ int main(){
     return 1;
   }
 
-  for(ifa = ifa_list; ifa != NULL; ifa = ifa_list->ifa_next){
+  for(ifa = ifa_list; ifa != NULL; ifa = ifa->ifa_next){
     printf("ifa_name:%s\n", ifa->ifa_name);
     printf("ifa_flags:  0x%.8x\n", ifa->ifa_flags);
 
