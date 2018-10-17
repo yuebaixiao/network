@@ -10,7 +10,7 @@ int main(){
 
   if(pid == 0){
     printf("child process : %d\n", getpid());
-    exit(0);
+    //exit(0);
   }
   else{
     int status;
@@ -20,6 +20,6 @@ int main(){
     waitpid = wait(&status);
     printf("waitpid:%d\n", waitpid);
   }
-
+  printf("end pid: %d\n", getpid());
   return 0;
 }
